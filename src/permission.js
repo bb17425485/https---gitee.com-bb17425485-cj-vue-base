@@ -17,6 +17,7 @@ router.beforeEach(async (to, from, next) => {
         if (to.path === '/login') {
             next({ path: '/login' })
             NProgress.done()
+            console.log('111 :>> ', 111);
         } else {
             try {
                 if (store.getters.info.username === undefined) {
